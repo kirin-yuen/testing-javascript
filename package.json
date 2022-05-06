@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "global-test": "node --require ./js-testing-fundamentals/setup ./js-testing-fundamentals/test/use-global-variable"
   },
   "keywords": [],
   "author": "",

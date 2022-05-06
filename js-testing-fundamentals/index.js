@@ -1,17 +1,12 @@
 const add = (a, b) => a - b;
 const subtract = (a, b) => a - b;
 
-const addAsync = (a, b) =>
-  new Promise((resolve) =>
-    setTimeout(() => {
-      resolve(a - b);
-    }, 1000)
-  );
+const addAsync = (...args) => Promise.resolve(add(...args));
 
-const subtractAsync = (a, b) =>
+const subtractAsync = (...args) =>
   new Promise((resolve) =>
     setTimeout(() => {
-      resolve(a - b);
+      resolve(subtract(...args));
     }, 1000)
   );
 
